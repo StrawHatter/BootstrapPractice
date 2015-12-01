@@ -11,11 +11,8 @@ void main()
 {
 	int no_nights;
 	int total = 0;
-	string room_type;
+	char check;
 	char code = ' ';
-	bool voucher;
-	string check = "Yes"
-    string check2;
 
 	RoomChoice Choice = ERROR;
 
@@ -26,7 +23,7 @@ void main()
 	cout << "Single             \x9C 110		S\n";
 
 	while (code != 'F'){
-		cout << "What room type would you like? Please use the corresponding Room Code. Press F when you have finished booking any number of rooms. \n";
+		cout << "What room type would you like? Please use the corresponding Room Code. Press F when you have finished booking any number of rooms. Press 'Ctrl + C' to exit the program at any time. \n";
 		cin >> code;
 		if (code != 'F') {
 			cout << "How many nights would you like to stay?\n";
@@ -44,7 +41,7 @@ void main()
 			break;
 		case 'F':
 			Choice = F;
-			break; 
+			break;
 		default:
 			Choice = ERROR;
 		}
@@ -60,14 +57,15 @@ void main()
 			total = no_nights * 110 + total;
 			break;
 		case F:
-			
-			cout << "Do you have a groupon voucher? Please enter 'Yes' or 'No'.\n";
-			cin >> check2;
-			if (check == check2){
-		    	cout << "hello"
-		    }
+
+			cout << "Do you have a groupon voucher? Please enter 'Y' or 'N'.";
+			cin >> check;
+
+			if (check == 'Y'){
+				cout << "\x9C" << (total * 0.85);
+			}
 			else {
-				cout << "Hello"
+				cout << "\x9C" << total;
 			}
 			break;
 		default:
