@@ -52,15 +52,18 @@ int main() {
 			switch (Hungry) {
 			case P:
 				Hungry = W;
+				break;
 			case H:
 				Hungry = P;
+				break;
 			case S:
 				Hungry = H;
-			//case D:
-			//	cout << nameOfPet << " is dead." << endl;
-			//	isAlive = false;
-			//	break;
-
+				break;
+			case D:
+				cout << nameOfPet << " is dead." << endl;
+				isAlive = false;
+	        	break;
+			}
 
 			switch (Hungry){
 				case W:
@@ -76,11 +79,10 @@ int main() {
 					cout << nameOfPet << " is starving." << endl;
 					break;
 
-
 				}
 
 
-			} //nested switch hungry finish
+			 //nested switch hungry finish
 
 		} //switch checkFeed finish
 
