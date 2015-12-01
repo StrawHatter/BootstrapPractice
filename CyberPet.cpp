@@ -88,7 +88,5 @@ int main() {
 
 
 
-
-
-	} while (isAlive = false);
+	} while (isAlive = true);
 		} 
