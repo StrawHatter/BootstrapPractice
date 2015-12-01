@@ -3,7 +3,7 @@
 
 //	The Black Art of 3D Games Programming
 
-//  Modified by CJM 24/9/'08 to run without error or warnings:
+//  Modified by Paul Dreczkowski on the 31/12/2015
 
 //	1.  hconsole - called TEXT( ) for parameter 1
 //	2.  added _ as prefix to deprecated kbhit() function
